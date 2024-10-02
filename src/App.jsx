@@ -1,12 +1,12 @@
 import React from 'react'
-import Splash from './components/general/Splash'
-import Onboarding from './components/general/Onboarding'
+import Dashboard from './components/dashboard/Dashboard'
+import SearchBar from './components/global/SearchBar'
 
 function App() {
 
   return (
     <>
-      <Onboarding />
+      <Dashboard />
     </>
   )
 }
