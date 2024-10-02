@@ -1,11 +1,12 @@
-import { useState } from 'react'
-
+import React from 'react'
+import Splash from './components/general/Splash'
+import Onboarding from './components/general/Onboarding'
 
 function App() {
 
   return (
     <>
-      <p className='text-accent'>Hello</p>
+      <Onboarding />
     </>
   )
 }
