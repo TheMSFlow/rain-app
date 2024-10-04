@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBar from '../global/SearchBar'
-import Locator from '../global/Locator'
 import Header from '../global/Header'
+import Button from '../global/Button'
 
 const SearchLocator = () => {
   return (
@@ -13,7 +13,7 @@ const SearchLocator = () => {
           <div className='xl:hidden w-[70%] lg:w-[80%]'><img className='w-full' src='/weather-location-enabled.svg'/></div>
           <SearchBar />
           <div className='xl:hidden w-[65%]' ><img src='/divider.svg'/></div>
-          <Locator />
+          <Button className={'text-primary-dark bg-secondary'} icon = {<img src='/locator.svg'/>} text ='Use current location' />
         </div>
     </>
   )

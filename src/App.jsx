@@ -1,12 +1,11 @@
 import React from 'react'
-import Dashboard from './components/dashboard/Dashboard'
-import SearchBar from './components/global/SearchBar'
+import SearchResult from './components/result/SearchResult'
 
 function App() {
 
   return (
     <>
-      <Dashboard />
+      <SearchResult />
     </>
   )
 }
