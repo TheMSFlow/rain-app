@@ -1,11 +1,12 @@
-import React from 'react'
-import WeatherBackground from '../global/WeatherBackground'
+import React, { useEffect } from 'react'
 import Header from '../global/Header'
-import SearchLocator from '../dashboard/SearchLocator'
 import ResultSummary from './ResultSummary'
 import StatusBar from './StatusBar'
 
+
+
 const SearchResult = () => {
+
   return (
     <>
      <div className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 h-full w-full xl:min-h-screen bg-charcoal'>
