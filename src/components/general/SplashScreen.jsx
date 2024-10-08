@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import WeatherBackground from '../global/WeatherBackground'
 import { useNavigate } from 'react-router-dom'
-import Onboarding from './Onboarding';
 
-const Splash = () => {
+const SplashScreen = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,4 +20,4 @@ const Splash = () => {
   )
 }
 
-export default Splash
+export default SplashScreen;

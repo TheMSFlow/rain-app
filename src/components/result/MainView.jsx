@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../global/Header'
 import WeatherCard from './WeatherCard'
-import Recommendation from './Recommendation'
 import StatusBar from './StatusBar'
+import Recommendations from './Recommendations'
 
 const MainView = ({ text, title, image }) => {
   return (
@@ -19,7 +19,7 @@ const MainView = ({ text, title, image }) => {
           < StatusBar text = {text} title = {title} />
         </div>
             <div className='-mt-3 pb-12'> 
-              <Recommendation /> 
+              <Recommendations /> 
             </div>
       </div>
     </>

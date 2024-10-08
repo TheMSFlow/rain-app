@@ -1,11 +1,11 @@
 import React from 'react'
 import WeatherButton from './WeatherButton'
 import { useWeather } from '../../Context/WeatherContext'
-import UseWeatherMain from '../../handling/weather/main/useWeatherMain';
+import UseWeatherMain from '../../handling/weather/main/UseWeatherMain';
 import UseWeatherDesktop from '../../handling/weather/main/useWeatherDesktop';
 
 
-const Recommendation = () => {
+const Recommendations = () => {
   const { weatherData} = useWeather();
 
   return (
@@ -27,7 +27,7 @@ const Recommendation = () => {
                 icon = {<img src='./src/assets/weather-icons/flat/temp.svg'/>} 
                 />
                 <WeatherButton 
-                main = 'Wind' 
+                main = 'Wind speed' 
                 description={`${Math.round(weatherData.wind.speed * 3.6)} km/h`} 
                 value={`${Math.round(weatherData.wind.speed * 3.6)} km/h`}  
                 icon = {<img src='./src/assets/weather-icons/flat/wind.svg'/>} 
@@ -48,4 +48,4 @@ const Recommendation = () => {
   )
 }
 
-export default Recommendation
+export default Recommendations

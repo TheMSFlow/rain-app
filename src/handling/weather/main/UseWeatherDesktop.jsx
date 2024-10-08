@@ -1,18 +1,16 @@
 import React from 'react'
 import useAccessoryDetails from '../useAccessoryDetails';
 import DesktopView from '../../../components/result/DesktopView';
-import { useWeather } from '../../../Context/WeatherContext';
 
 const UseWeatherDesktop = () => {
-    const { weatherData} = useWeather();
-    const { selectedAccessory} = useAccessoryDetails();
+    const { selectedAccessory, weatherDescription} = useAccessoryDetails();
       
   return (
     <div>
         {selectedAccessory &&
                 <DesktopView 
                     text={selectedAccessory.text} 
-                    title={weatherData.weather[0].description} 
+                    title={weatherDescription} 
                     image ={selectedAccessory.image}
                 />
         }

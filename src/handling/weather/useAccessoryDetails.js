@@ -174,6 +174,7 @@ const useAccessoryDetails = () => {
 
   const weatherMain = weatherData?.weather[0]?.main;
   const weatherDescription = weatherData?.weather[0]?.description;
+  
 
   const recommendationsForMain = accessoryDetails[weatherMain];
   const selectedAccessory = recommendationsForMain?.[weatherDescription] || recommendationsForMain?.default || null;

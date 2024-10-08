@@ -8,6 +8,7 @@ const UseCurrentLocation = () => {
     const navigate = useNavigate();
     const [lat, setLat] = useState();
     const [lon, setLon] = useState();
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(
@@ -16,7 +17,7 @@ const UseCurrentLocation = () => {
             setLon(position.coords.longitude);
         },
         (error) => {
-            console.error('Error getting location:', error)
+            setError(error)
         }
     );
 },[])
@@ -28,22 +29,31 @@ const UseCurrentLocation = () => {
         
           if (lat && lon) {
             fetch(base + query)
-            .then((response) => response.json())
+            .then((response) => 
+              response.json())
             .then((weatherData) => {
-              console.log('Weather Data:', weatherData);
               setWeatherData(weatherData);
               navigate('/result');
             })
-            .catch((error) => console.error('Weather API Error:', error));
+            .catch((error) => setError(error));
           } else {
-            console.error('Latitude or Longitude is not available.')
+            setError('Getting your location...')
           }
           
        };
 
+
   return (
-    <Button onClick={() => fetchWeather(lat, lon)} className={'text-primary-dark bg-secondary'} icon = {<img src='/locator.svg'/>} text ='Use current location' />
-  )
-}
+    <>
+      {error && <div className='text-accent text-xs flex flex-col gap-1 justify-center items-center mb-4'>
+          {error}
+          <button onClick={() => setError(null)} className='underline'>Try again</button>
+          </div>
+          }
+      <Button onClick={() => fetchWeather(lat, lon)} className={'text-primary-dark bg-secondary'} icon = {<img src='/locator.svg'/>} text ='Use current location' />
+      
+    </>
+
+)}
 
 export default UseCurrentLocation

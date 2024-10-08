@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import Splash from './components/general/Splash';
+import Splash from './components/general/SplashScreen';
 import Onboarding from './components/general/Onboarding';
 import DashBoard from './components/dashboard/Dashboard'
 import SearchResult from './components/result/SearchResult'

@@ -1,11 +1,9 @@
 import React from 'react'
 import useAccessoryDetails from '../useAccessoryDetails';
-import { useWeather } from '../../../Context/WeatherContext';
 import MainView from '../../../components/result/MainView';
 
 const UseWeatherMain = () => {
-    const { weatherData} = useWeather();
-    const { selectedAccessory} = useAccessoryDetails();
+    const { selectedAccessory, weatherDescription} = useAccessoryDetails();
 
       
   return (
@@ -13,7 +11,7 @@ const UseWeatherMain = () => {
         {selectedAccessory &&
                 <MainView 
                     text={selectedAccessory.text} 
-                    title={weatherData.weather[0].description} 
+                    title={weatherDescription} 
                     image ={selectedAccessory.image}
                 />
         }

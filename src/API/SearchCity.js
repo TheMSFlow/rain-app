@@ -1,4 +1,4 @@
-const searchCity = (city, setList) => {
+const searchCity = (city, setList, setError) => {
     const key = '9ca9296066ca4ec01e96d51caa1593aa'
     const base = 'http://api.openweathermap.org/geo/1.0/direct'
     const query = `?q=${city}&limit=5&appid=${key}`
@@ -8,10 +8,12 @@ const searchCity = (city, setList) => {
       .then((response) => response.json())
       .then((result) => 
         {
-        console.log(result)
+        if(result.length === 0) {
+          throw new Error("Not sure you entered the correct city name")
+        } 
         setList(result)
         })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error.message));
   }
 
   export default searchCity;
