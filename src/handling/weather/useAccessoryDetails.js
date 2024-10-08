@@ -178,7 +178,7 @@ const useAccessoryDetails = () => {
   const recommendationsForMain = accessoryDetails[weatherMain];
   const selectedAccessory = recommendationsForMain?.[weatherDescription] || recommendationsForMain?.default || null;
 
-  return { selectedAccessory };
+  return { selectedAccessory, weatherDescription };
 };
 
 export default useAccessoryDetails;

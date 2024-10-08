@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../global/Header'
 import WeatherCard from './WeatherCard'
 import Recommendation from './Recommendation'
+import StatusBar from './StatusBar'
 
 const MainView = ({ text, title, image }) => {
   return (
@@ -15,14 +16,9 @@ const MainView = ({ text, title, image }) => {
           </div>
         <WeatherCard image={image}/>
         <div className='xl:hidden'>
-          <div className='flex flex-col gap-0 justify-center items-start w-screen'>
-            <div className='bg-accent text-xs py-[6px] px-[10px] rounded-[4px_4px_0px_0px] ml-6'>
-              {title || "No weather info"}
-            </div>
-            <p className='bg-secondary text-xs px-6 py-[10px] w-full'>{text || "No accessory recommendation."}</p>
-          </div>
+          < StatusBar text = {text} title = {title} />
         </div>
-            <div className='-mt-3'> 
+            <div className='-mt-3 pb-12'> 
               <Recommendation /> 
             </div>
       </div>
