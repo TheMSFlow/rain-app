@@ -2,7 +2,7 @@ import React from 'react'
 import WeatherButton from './WeatherButton'
 import { useWeather } from '../../Context/WeatherContext'
 import UseWeatherMain from '../../handling/weather/main/UseWeatherMain';
-import UseWeatherDesktop from '../../handling/weather/main/useWeatherDesktop';
+import UseWeatherDesktop from '../../handling/weather/main/UseWeatherDesktop';
 
 
 const Recommendations = () => {
