@@ -12,7 +12,7 @@ const MainView = ({ text, title, image }) => {
           <Header 
             backBtn={true} 
             logo={false} 
-            shareBtn={true}/>
+            shareBtn={false}/>
           </div>
         <WeatherCard image={image}/>
         <div className='xl:hidden'>

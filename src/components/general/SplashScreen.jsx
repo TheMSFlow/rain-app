@@ -15,7 +15,7 @@ const SplashScreen = () => {
 
   return (
     <div>
-    <WeatherBackground heading = {<span className='text-white'> Drip Weather </span>} />
+    <WeatherBackground heading = {<span className='text-white'> Rain </span>} />
     </div>
   )
 }
