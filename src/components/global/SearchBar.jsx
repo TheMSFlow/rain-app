@@ -60,7 +60,7 @@ const SearchBar = ({onFocus, onBlur}) => {
         />
         </form>
         {list.length > 0 && (
-          <div className='flex flex-col gap-0 w-[273px] mt-2 h-[150px] overflow-y-scroll xl:h-auto'>
+          <div className='flex flex-col gap-0 w-[273px] mt-2 h-[150px] overflow-y-scroll xl:h-auto '>
             {list.map((place,index) => (
               <div onClick={() => handleFetchWeather(place.lat, place.lon)} key={index} className='block w-full text-white py-2 border-[#1e1e1e] border-b-[1px] cursor-pointer'>
                 {place.name}, {place.state}, {place.country}
@@ -68,7 +68,7 @@ const SearchBar = ({onFocus, onBlur}) => {
             ))}
           </div>
         )}
-        {error && <div className='text-accent text-xs flex flex-col gap-1 justify-center items-center mt-4'>
+        {error && <div className='text-accent text-xs flex flex-col gap-1 justify-center items-center pt-4'>
           {error}
           <button onClick={handleSearchError} className='underline'>Try again?</button>
           </div>
