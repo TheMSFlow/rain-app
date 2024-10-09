@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import searchCity from '../../API/searchCity'
+import searchCity from '../../API/SearchCity'
 import { useNavigate } from 'react-router-dom'
 import { useWeather } from '../../Context/WeatherContext'
 import fetchWeather from '../../API/FetchWeather'
