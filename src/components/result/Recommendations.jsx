@@ -4,6 +4,10 @@ import { useWeather } from '../../Context/WeatherContext'
 import UseWeatherMain from '../../handling/weather/main/UseWeatherMain';
 import UseWeatherDesktop from '../../handling/weather/main/UseWeatherDesktop';
 
+import tenD from '../../assets/weather-icons/flat/10d.svg';
+import temp from '../../assets/weather-icons/flat/temp.svg';
+import wind from '../../assets/weather-icons/flat/wind.svg';
+import humidity from '../../assets/weather-icons/flat/humidity.svg';
 
 const Recommendations = () => {
   const { weatherData} = useWeather();
@@ -17,26 +21,26 @@ const Recommendations = () => {
                 <WeatherButton 
                 main = {weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1)} 
                 value={null} 
-                icon = {<img src='./src/assets/weather-icons/flat/10d.svg'/>}
+                icon = {<img src={tenD} alt='Weather icon'/>}
                 onClick={() => { UseWeatherMain(); UseWeatherDesktop(); }}
                 />
                 <WeatherButton 
                 main = 'Feels like' 
                 description={`${Math.round(weatherData.main.feels_like)} °c`} 
                 value={`${Math.round(weatherData.main.feels_like)}°c`} 
-                icon = {<img src='./src/assets/weather-icons/flat/temp.svg'/>} 
+                icon = {<img src={temp} alt='Temperature icon'/>} 
                 />
                 <WeatherButton 
                 main = 'Wind speed' 
                 description={`${Math.round(weatherData.wind.speed * 3.6)} km/h`} 
                 value={`${Math.round(weatherData.wind.speed * 3.6)} km/h`}  
-                icon = {<img src='./src/assets/weather-icons/flat/wind.svg'/>} 
+                icon = {<img src={wind} alt='Wind icon'/>} 
                 />
                 <WeatherButton 
                 main = 'Humidity' 
                 description={`${weatherData.main.humidity} %`} 
                 value='74%' 
-                icon = {<img src='./src/assets/weather-icons/flat/humidity.svg'/>} 
+                icon = {<img src={humidity} alt='Humidity icon'/>} 
                 />
             </div>
             </div>
