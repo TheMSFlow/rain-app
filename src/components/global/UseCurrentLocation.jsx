@@ -23,7 +23,7 @@ const UseCurrentLocation = () => {
 },[])
 
     const fetchWeather = (lat, lon) => {
-        const key = '9ca9296066ca4ec01e96d51caa1593aa'
+          const key = import.meta.env.VITE_RAIN_API_KEY;
           const base = 'https://api.openweathermap.org/data/2.5/weather'
           const query =`?lat=${lat}&lon=${lon}&units=metric&appid=${key}`
         

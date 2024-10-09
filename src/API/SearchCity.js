@@ -1,5 +1,5 @@
 const searchCity = (city, setList, setError) => {
-    const key = '9ca9296066ca4ec01e96d51caa1593aa'
+  const key = import.meta.env.VITE_RAIN_API_KEY;
     const base = 'http://api.openweathermap.org/geo/1.0/direct'
     const query = `?q=${city}&limit=5&appid=${key}`
   
