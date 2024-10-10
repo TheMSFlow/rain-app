@@ -1,4 +1,5 @@
 import { useWeather } from "../../Context/WeatherContext";
+import images from "../../utils/importAllImages";
 
 const useAccessoryDetails = () => {
   const { weatherData } = useWeather();
@@ -6,167 +7,167 @@ const useAccessoryDetails = () => {
   const accessoryDetails = {
     Clear: {
       "clear sky": {
-        image: "wide-brimmed-hat.png",
+        image: images["wide-brimmed-hat"],
         text: "Sun protection for face and neck",
       },
     },
     Clouds: {
       "few clouds": {
-        image: "wind-resistant-sunglasses.png",
+        image: images["wind-resistant-sunglasses"],
         text: "Protect from UV and light wind",
       },
       "scattered clouds": {
-        image: "windproof-vest.png",
+        image: images["windproof-vest"],
         text: "Protect from moderate wind",
       },
       "broken clouds": {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Protect from light rain",
       },
       "overcast clouds": {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Full rain protection",
       },
     },
     Rain: {
       "light rain": {
-        image: "bucket-hat.png",
+        image: images["bucket-hat"],
         text: "Stylish rain protection",
       },
       "moderate rain": {
-        image: "waterproof-shoe-covers.png",
+        image: images["waterproof-shoe-covers"],
         text: "Protect feet from getting wet",
       },
       "heavy intensity rain": {
-        image: "fashion-raincoats.png",
+        image: images["fashion-raincoats"],
         text: "Waterproof and stylish",
       },
       "shower rain": {
-        image: "uv-blocking-umbrella.png",
+        image: images["uv-blocking-umbrella"],
         text: "Dual protection for rain and sun",
       },
     },
     Drizzle: {
       "light intensity drizzle": {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Light rain protection without bulk",
       },
       "heavy intensity drizzle": {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Waterproof, easy to wear",
       },
     },
     Thunderstorm: {
       "thunderstorm with rain": {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Full rain protection",
       },
       "thunderstorm with light rain": {
-        image: "rain-boot.png",
+        image: images["rain-boot"],
         text: "Durable rain protection for feet",
       },
     },
     Snow: {
       "light snow": {
-        image: "shearling-lined-boots.png",
+        image: images["shearling-lined-boots"],
         text: "Warm and snow-resistant footwear",
       },
       snow: {
-        image: "traper-hat.png",
+        image: images["traper-hat"],
         text: "Warmth and wind protection",
       },
       "heavy snow": {
-        image: "thermal-gloves.png",
+        image: images["thermal-gloves"],
         text: "Maximum warmth and snow protection",
       },
       "snow showers": {
-        image: "goggles.png",
+        image: images["goggles"],
         text: "Protect eyes from wind and snow",
       },
     },
     Mist: {
       default: {
-        image: "moisture-wicking-socks.png",
+        image: images["moisture-wicking-socks"],
         text: "Keep feet dry in damp conditions",
       },
     },
     Fog: {
       default: {
-        image: "windproof-vest",
+        image: images["windproof-vest"],
         text: "Extra layer for wind and cool mist protection",
       },
     },
     Haze: {
       default: {
-        image: "wind-resistant-sunglasses.png",
+        image: images["wind-resistant-sunglasses"],
         text: "Protection from dust particles and wind",
       },
     },
     Dust: {
       default: {
-        image: "transparent-face-shields.png",
+        image: images["transparent-face-shields"],
         text: "Protect face and eyes from dust",
       },
     },
     Sand: {
       sand: {
-        image: "uv-blocking-goggles.png",
+        image: images["uv-blocking-goggles"],
         text: "Protect eyes from sand and wind",
       },
       sandstorm: {
-        image: "goggles.png",
+        image: images["goggles"],
         text: "Protect eyes from sand and wind",
       },
     },
     Smoke: {
       default: {
-        image: "dust-mask.png",
+        image: images["dust-mask"],
         text: "Protect lungs and face from smoke",
       },
     },
     Wind: {
       breezy: {
-        image: "neck-gaiters.png",
+        image: images["neck-gaiters"],
         text: "Protect neck and face from wind",
       },
       "strong breeze": {
-        image: "balaclavas.png",
+        image: images["balaclavas"],
         text: "Full face protection from wind",
       },
       gale: {
-        image: "leather-touchscreen-gloves.png",
+        image: images["leather-touchscreen-gloves"],
         text: "Windproof gloves for cold conditions",
       },
       "severe gale": {
-        image: "cold-weather-face-masks.png",
+        image: images["cold-weather-face-masks"],
         text: "Full wind and cold protection",
       },
     },
     Extreme: {
       "extreme cold": {
-        image: "thermal-insoles.png",
+        image: images["thermal-insoles"],
         text: "Keep feet warm in freezing temperatures",
       },
       "extreme heat": {
-        image: "cooling-hoodie-towel.png",
+        image: images["cooling-hoodie-towel"],
         text: "Stay cool in extremely hot weather",
       },
     },
     Tornado: {
       default: {
-        image: "protective-helmets.png",
+        image: images["protective-helmets"],
         text: "Protection from flying debris during tornadoes",
       },
     },
     Squall: {
       default: {
-        image: "waterproof-poncho.png",
+        image: images["waterproof-poncho"],
         text: "Protect from intense rain during squalls",
       },
     },
     Ash: {
       default: {
-        image: "face-shields.png",
+        image: images["face-shields"],
         text: "Protection from volcanic ash particles",
       },
     },

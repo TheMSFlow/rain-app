@@ -3,6 +3,7 @@ import { useWeather } from '../../Context/WeatherContext'
 
 const HandleWeatherBackground = () => {
     const { weatherData} = useWeather();
+    //public folder items do not require imports to display in prod
     const weatherBackgrounds = {
         '01d': './sunny.png',
         '01n': './cloudy-dark.png',

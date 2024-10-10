@@ -4,6 +4,7 @@ import WeatherCard from './WeatherCard'
 import StatusBar from './StatusBar'
 import Recommendations from './Recommendations'
 
+
 const MainView = ({ text, title, image }) => {
   return (
     <>

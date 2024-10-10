@@ -15,8 +15,8 @@ const Recommendations = () => {
   return (
     <>
         <div className='flex flex-col gap-1 justify-center items-center'>
-            <div className='flex flex-col gap-4'>
-            <p className='text-white text-xs text-center'>Click any weather info to see recommendations.</p>
+            <div className='flex flex-col gap-4 justify-center items-stretch w-[253px] sm:w-auto xl:w-[253px]'>
+            {/* <p className='text-white text-xs text-center '>Click any weather info to see recommendations.</p> */}
             <div className='flex flex-col gap-2 xl:flex xl:flex-col sm:grid sm:grid-cols-2 sm:grid-rows-2'>
                 <WeatherButton 
                 main = {weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1)} 

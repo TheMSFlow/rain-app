@@ -15,6 +15,14 @@ export default {
       'secondary': '#B2E2F3',
       'accent': '#F9E8AF',
     },
+    screens: {
+      'sm': '500px',
+      'md': '600px',
+      'lg': '768px',
+      'xl': '1024px',
+      '2xl': '1200px',
+      '3xl': '1536px'
+    },
     extend: {
       fontFamily: {
         onest: ['Onest','sans-serif'],
