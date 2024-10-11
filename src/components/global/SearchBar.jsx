@@ -60,7 +60,7 @@ const SearchBar = ({onFocus, onBlur}) => {
         />
         </form>
         {list.length > 0 && (
-          <div className='flex flex-col gap-0 w-[273px] mt-2 h-[150px] overflow-y-scroll xl:h-auto '>
+          <div className='flex flex-col gap-0 w-[273px] mt-2 h-[150px] overflow-y-scroll xl:h-auto xl:overflow-y-hidden'>
             {list.map((place,index) => (
               <div onClick={() => handleFetchWeather(place.lat, place.lon)} key={index} className='block w-full text-white py-2 border-[#1e1e1e] border-b-[1px] cursor-pointer'>
                 {place.name}, {place.state}, {place.country}

@@ -22,7 +22,6 @@ const Recommendations = () => {
                 main = {weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1)} 
                 value={null} 
                 icon = {<img src={tenD} alt='Weather icon'/>}
-                onClick={() => { UseWeatherMain(); UseWeatherDesktop(); }}
                 />
                 <WeatherButton 
                 main = 'Feels like' 
