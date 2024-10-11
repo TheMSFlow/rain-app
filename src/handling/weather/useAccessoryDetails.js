@@ -13,8 +13,8 @@ const useAccessoryDetails = () => {
     },
     Clouds: {
       "few clouds": {
-        image: images["wind-resistant-sunglasses"],
-        text: "Protect from UV and light wind",
+        image: images["windproof-vest"],
+        text: "Protect from moderate wind",
       },
       "scattered clouds": {
         image: images["windproof-vest"],
