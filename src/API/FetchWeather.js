@@ -10,13 +10,13 @@ const fetchWeather = (lat, lon, setWeatherData, setError) => {
             if (!response.ok) {
                 throw new Error("Couldn't reach the data at this time")
             }
-        return response.json();
-    })
+        return response.json();})
         .then((weatherData) => {
           setWeatherData(weatherData);
+          sessionStorage.setItem('weatherData', JSON.stringify(weatherData));
           setError(null);
         })
-        .catch((error) => console.log(error.message));
+        .catch((error) => setError(error.message));
       } else {
         setError('Latitude or Longitude is not available.')
       }

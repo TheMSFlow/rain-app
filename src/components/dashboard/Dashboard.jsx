@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import WeatherBackground from '../global/WeatherBackground'
 import Header from '../global/Header'
 import SearchLocator from './SearchLocator'
 
 const Dashboard = () => {
+
+  useEffect(() => {
+    sessionStorage.removeItem('weatherData');
+    sessionStorage.removeItem('currentLocation');
+  },[]);
+
+
   return (
     <>
     <div className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 h-screen w-screen bg-charcoal'>

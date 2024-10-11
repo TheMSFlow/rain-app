@@ -33,9 +33,10 @@ const UseCurrentLocation = () => {
               response.json())
             .then((weatherData) => {
               setWeatherData(weatherData);
+              sessionStorage.setItem('currentLocation', JSON.stringify(weatherData));
               navigate('/result');
             })
-            .catch((error) => setError(error));
+            .catch((error) => setError(error.message));
           } else {
             setError('Getting your location...')
           }
