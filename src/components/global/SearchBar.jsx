@@ -12,6 +12,7 @@ const SearchBar = ({onFocus, onBlur}) => {
  const navigate = useNavigate();
 
  const cityForm = useRef(null);
+ const inputRef = useRef(null);
 
  const handleChange = (e) => {
     setCity(e.target.value)
@@ -42,6 +43,7 @@ const SearchBar = ({onFocus, onBlur}) => {
  const handleSearchError = () => {
   setError(null);
   cityForm.current.reset();
+  inputRef.current.focus();
   list.length = 0;
  }
 
@@ -57,6 +59,7 @@ const SearchBar = ({onFocus, onBlur}) => {
         onChange={handleChange}
         onFocus={onFocus}
         onBlur={onBlur}
+        ref={inputRef}
         />
         </form>
         {list.length > 0 && (
