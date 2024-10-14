@@ -71,12 +71,12 @@ const SearchResult = () => {
         Go back to dashboard
         </button>
     </div> }
-     <div className='block xl:grid xl:grid-cols-[340px_minmax(0,1fr)] grid-rows-1 gap-0 w-full min-h-screen bg-charcoal'>
+     <section className='block xl:grid xl:grid-cols-[340px_minmax(0,1fr)] grid-rows-1 gap-0 w-full min-h-screen bg-charcoal'>
       {/* Rendered by MainView, display block on mobile and tablet. On desktop it forms the first part of the grid */}
        <UseWeatherMain />
        {/* Rendered by DesktopView, hidden on mobile and tablet. On desktop it forms the second part of the grid */}
       <UseWeatherDesktop />
-    </div>
+    </section>
     </>
   )
 }

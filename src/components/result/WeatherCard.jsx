@@ -9,7 +9,7 @@ const WeatherCard = ({image}) => {
  
   return (
     <>
-    <div className='relative h-auto w-full px-4 xl:pt-6'>
+    <section className='relative h-auto w-full px-4 xl:pt-6'>
         <HandleWeatherBackground />
         <HandleWeatherIcon />
       <div className='flex flex-col gap-4 justify-center items-center'>
@@ -19,7 +19,7 @@ const WeatherCard = ({image}) => {
         </div>
        </div>
         <div className='mt-6 hidden sm:hidden lg:block xl:hidden'><WeatherCardMini /></div>
-    </div>
+    </section>
     </>
   )
 }

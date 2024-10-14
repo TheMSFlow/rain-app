@@ -16,12 +16,12 @@ const MainView = ({ text, title, image }) => {
             shareBtn={false}/>
           </div>
         <WeatherCard image={image}/>
-        <div className='xl:hidden'>
+        <section className='xl:hidden'>
           < StatusBar text = {text} title = {title} />
-        </div>
-            <div className='-mt-3 pb-12'> 
+        </section>
+            <section className='-mt-3 pb-12'> 
               <Recommendations /> 
-            </div>
+            </section>
       </div>
     </>
   )
