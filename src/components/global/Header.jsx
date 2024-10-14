@@ -11,9 +11,9 @@ const Header = ({ backBtn, logo, shareBtn }) => {
   return (
     <>
     <header className='flex flex-row justify-between items-center h-12 xl:mt-4 w-full px-4 xl:px-6 relative z-50'>
-        {backBtn && <button onClick = {handleBackBtn}> <img src='/back-btn.svg'/> </button>}
+        {backBtn && <button className='focus-visible:outline focus-visible:outline-4 focus-visible:outline-accent focus-visible:outline-offset-4' onClick = {handleBackBtn}> <img src='/back-btn.svg'/> </button>}
         {logo && <p className='font-playfair text-2xl lg:text-3xl text-white m-auto'> Rain </p>}
-        {shareBtn && <button> <img src='/share-btn.svg'/> </button>}
+        {shareBtn && <button className='focus-visible:outline focus-visible:outline-4 focus-visible:outline-accent focus-visible:outline-offset-4'> <img src='/share-btn.svg'/> </button>}
     </header>
     </>
   )

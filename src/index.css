@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-    #root {
-      @apply overflow-hidden;
+    html, body, #root {
+      @apply h-full w-full overflow-hidden;
     }
   }

@@ -15,6 +15,7 @@ const Onboarding = ({userBoarded}) => {
   return (
     <>
     <WeatherBackground 
+    className={'w-screen h-screen'}
     icons = {
         <div className='flex flex-row gap-2'>
             <img className='w-10 h-10 lg:w-20 lg:h-20' src='/sun.png'/>
@@ -24,7 +25,7 @@ const Onboarding = ({userBoarded}) => {
         </div>}
     heading = {<span className='text-secondary text-5xl lg:text-8xl'>What's up?</span>} 
     subheading = {<p className='text-white text-center max-w-[45ch] text-base lg:text-lg'>Rain suggests clothing accessories based on your destination's weather.</p>}
-    button = {<Button onClick = {finishOnboarding} className='text-primary-dark bg-secondary' text='Get started' />}
+    button = {<Button onClick = {finishOnboarding} className='text-primary-dark bg-secondary hover:text-white hover:bg-primary' text='Get started' />}
     />
     </>
   )

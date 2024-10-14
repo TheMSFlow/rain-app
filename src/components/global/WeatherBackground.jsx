@@ -1,9 +1,9 @@
 import React from 'react'
 
-const WeatherBackground = ({ icons, heading, subheading, button }) => {
+const WeatherBackground = ({ className, icons, heading, subheading, button }) => {
   return (
     <>
-    <div className='w-screen h-screen bg-charcoal flex flex-col justify-center items-center z-0 relative'>
+    <div className={`${className} bg-charcoal flex flex-col justify-center items-center z-0 relative`}>
             <div className='flex flex-row w-full'>
             <img className='w-[50%] object-cover' src='/cold.png'/>
             <img className='w-[50%] object-cover' src='/sunny.png'/>

@@ -13,9 +13,13 @@ const Dashboard = () => {
 
   return (
     <>
-    <div className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 h-screen w-screen bg-charcoal'>
+    <div className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 min-h-screen w-screen bg-charcoal'>
         <div className='relative'>
-            {<div className='xl:hidden'><WeatherBackground /> </div>}
+            {<div className='xl:hidden'>
+              <WeatherBackground 
+              className={'min-h-screen w-full'}
+              /> 
+        </div>}
         <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center xl:bg-sidebar rounded-r-3xl'>
             <SearchLocator />
         </div>

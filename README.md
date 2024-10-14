@@ -4,7 +4,7 @@
 
 ![Rain app mobile view](public/rain-mobile.png)
 
-#### [View prototype](https://www.figma.com/proto/UiFTfYDbsFWgF8lPSfidqO/Rain?page-id=0%3A1&node-id=161-4213&node-type=canvas&viewport=780%2C313%2C0.06&t=dJomzIEZJ1T7Eflp-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=161%3A4229&share=1&show-proto-sidebar=1) | Password: "Rain_ALX"
+#### [View prototype](https://www.figma.com/proto/UiFTfYDbsFWgF8lPSfidqO/Rain?page-id=0%3A1&node-id=161-3531&node-type=frame&viewport=470%2C153%2C0.05&t=Qa673U6MNnUoBzEI-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=161%3A3549&show-proto-sidebar=1)
 #### [View project summary](https://docs.google.com/document/d/1zqJfSA-Xt9l1sAYvxJFAMHUSJfFo4DCrO0yyE2sktv8/edit?usp=sharing)
 <br><br>
 
