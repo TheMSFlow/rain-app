@@ -14,11 +14,11 @@ const Dashboard = () => {
   return (
     <>
     {/*main element displays block on mobile and tablet. On larger screens (xl and above) it displays 2 grid columns, 340px and 1fr.*/}
-    <main className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 max-h-[100svh] overflow-y-auto overflow-x-hidden w-screen bg-charcoal'>
+    <main className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 max-h-[100svh] xl:min-h-screen overflow-y-auto overflow-x-hidden w-screen bg-charcoal'>
         <div className='relative'>
             {<div className='xl:hidden'>
               <WeatherBackground 
-              className={'min-h-screen w-full'}
+              className={'w-full h-[100svh]'}
               /> 
         </div>}
         <section className='absolute top-0 left-0 w-full h-full flex items-center justify-center xl:bg-sidebar rounded-r-3xl'>

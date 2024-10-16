@@ -15,7 +15,7 @@ const Onboarding = ({userBoarded}) => {
   return (
     <>
     <WeatherBackground 
-    className={'w-screen h-screen'}
+    className={'w-screen h-[100svh]'}
     icons = {
         <div className='flex flex-row gap-2'>
             <img className='w-10 h-10 lg:w-20 lg:h-20' src='/sun.png'/>
