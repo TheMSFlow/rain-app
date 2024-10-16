@@ -18,9 +18,6 @@ const SearchResult = () => {
     const lastSavedSearch = sessionStorage.getItem('weatherData') 
     const lastSavedLocation = sessionStorage.getItem('currentLocation')
 
-    console.log(`Searched Location on refresh: ${sessionStorage.getItem('weatherData')}`);
-    console.log(`User's Location on refresh: ${sessionStorage.getItem('currentLocation')}`);
-
     const fetchRealTimeWeather = () => {
       if(lastSavedLocation) {
         const location = JSON.parse(lastSavedLocation);
@@ -42,7 +39,7 @@ const SearchResult = () => {
           }
       },
       (geoError) => {
-        setError(`Geolocation error: ${geoError}`)
+        setError(geoError.message)
       }
     );
     } else if(lastSavedSearch) {
@@ -67,19 +64,19 @@ const SearchResult = () => {
  
 
   return (
-    <>
-    { error && <div className='absolute w-[300px] h-[200px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-charcoal text-accent flex flex-col gap-1 justify-center items-center py-4 px-2'>
-      {error}
-      <button onClick={handleSearchError} className='underline'>
-        Go back to dashboard
-        </button>
-    </div> }
-     <section className='block xl:grid xl:grid-cols-[340px_minmax(0,1fr)] grid-rows-1 gap-0 w-full min-h-screen bg-charcoal'>
+    <> 
+     <section className='block xl:grid xl:grid-cols-[340px_minmax(0,1fr)] grid-rows-1 gap-0 w-full bg-charcoal'>
       {/* Rendered by MainView, display block on mobile and tablet. On desktop it forms the first part of the grid */}
        <UseWeatherMain />
        {/* Rendered by DesktopView, hidden on mobile and tablet. On desktop it forms the second part of the grid */}
       <UseWeatherDesktop />
     </section>
+    { error && <div className='absolute w-auto h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-charcoal flex flex-col gap-3 justify-center items-center py-8 px-5 text-center rounded-xl text-white'>
+      {error}
+      <button onClick={handleSearchError} className='underline text-accent hover:text-secondary'>
+        Go back to dashboard
+        </button>
+    </div> }
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WeatherBackground = ({ className, icons, heading, subheading, button }) => {
+const WeatherBackground = ({ className,icons, heading, subheading, button }) => {
   return (
     <>
     <div className={`${className} bg-charcoal flex flex-col justify-center items-center z-0 relative`}>
