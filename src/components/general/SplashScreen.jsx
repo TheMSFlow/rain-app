@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const SplashScreen = () => {
   const navigate = useNavigate();
 
+  // Splash screen navigates to onboarding after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/onboarding');

@@ -14,6 +14,7 @@ const fetchWeather = (lat, lon, setWeatherData, setError) => {
         .then((weatherData) => {
           setWeatherData(weatherData);
           sessionStorage.setItem('weatherData', JSON.stringify(weatherData));
+          console.log(`User Search just logged: ${JSON.stringify(weatherData)}`)
           setError(null);
         })
         .catch((error) => setError(error.message));

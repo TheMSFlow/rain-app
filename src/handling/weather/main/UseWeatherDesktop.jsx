@@ -1,6 +1,6 @@
 import React from 'react'
 import useAccessoryDetails from '../useAccessoryDetails';
-import DesktopView from '../../../components/result/DesktopView';
+import DesktopView from '../../../components/global/DesktopView';
 
 const UseWeatherDesktop = () => {
     const { selectedAccessory, weatherDescription} = useAccessoryDetails();

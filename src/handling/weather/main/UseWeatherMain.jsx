@@ -1,6 +1,6 @@
 import React from 'react'
 import useAccessoryDetails from '../useAccessoryDetails';
-import MainView from '../../../components/result/MainView';
+import MainView from '../../../components/global/MainView';
 
 const UseWeatherMain = () => {
     const { selectedAccessory, weatherDescription} = useAccessoryDetails();

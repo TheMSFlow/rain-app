@@ -2,9 +2,8 @@ import React, { useState , useEffect, useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useWeather } from '../../Context/WeatherContext'
 import Button from './Button'
-import SearchBar from './SearchBar'
 
-const UseCurrentLocation = ({removeImageOnGeoError}) => {
+const UseCurrentLocation = ({removeImageOnGeoError, inputRef}) => {
     const { setWeatherData } = useWeather();
     const navigate = useNavigate();
     const [lat, setLat] = useState();
@@ -30,6 +29,7 @@ const UseCurrentLocation = ({removeImageOnGeoError}) => {
     (geoError) => {
       setLoading(null);
         setGeoError('Location access denied. To use location please enable it in your browser settings and reload the page.')
+        // If there is a geoError, run the removeImageOnGeoError function. It's passed as a prop to be handled in the SearchLocator component. This is a UI fix to manage screen real estate on mobile and tablet.
         removeImageOnGeoError();
     }
   );
@@ -48,6 +48,7 @@ const UseCurrentLocation = ({removeImageOnGeoError}) => {
             .then((weatherData) => {
               setWeatherData(weatherData);
               sessionStorage.setItem('currentLocation', JSON.stringify(weatherData));
+              console.log(`Current Location just logged: ${JSON.stringify(weatherData)}`)
               navigate('/result');
             })
             .catch((error) => setError(error.message));
@@ -57,13 +58,15 @@ const UseCurrentLocation = ({removeImageOnGeoError}) => {
           
        };
 
-       const handleGeoError = () => {
+       const handleReloadPage = () => {
         window.location.reload();
       };
 
       const handleInputFocus = () => {
+        inputRef.current.focus()
         setGeoError(null);
       }
+
 
   return (
     <>
@@ -83,7 +86,7 @@ const UseCurrentLocation = ({removeImageOnGeoError}) => {
           {geoError}
           <div className='flex flex-col gap-4 justify-center items-center mt-4'>
             <Button 
-            onClick={handleGeoError} 
+            onClick={handleReloadPage} 
             className= {'bg-secondary text-primary-dark hover:bg-primary-dark hover:text-white'}
             text= 'Reload page'
             />

@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Shows more information on the accessory recommended. Also carries weather info.
 const StatusBar = ({ text, title }) => {
   return (
     <>

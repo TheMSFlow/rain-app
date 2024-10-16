@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../global/Header'
-import WeatherCard from './WeatherCard'
-import StatusBar from './StatusBar'
-import Recommendations from './Recommendations'
+import WeatherCard from '../result/WeatherCard'
+import StatusBar from '../result/StatusBar'
+import Recommendations from '../result/Recommendations'
 
-
+//MainView handles the full display on mobile and tablet. It also forms the 340px sidebar in Desktop
 const MainView = ({ text, title, image }) => {
   return (
     <>

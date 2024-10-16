@@ -1,6 +1,7 @@
 import React from 'react'
 import { useWeather } from '../../Context/WeatherContext'
 
+//displays the city and country of weather data result
 const CityCountryPill = () => {
   const { weatherData} = useWeather();
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import CityCountryPill from './CityCountryPill'
 import { useWeather } from '../../Context/WeatherContext'
 
+//displays city and country from CityCountryPill + weather description and main temp 
 const WeatherCardMini = () => {
   const { weatherData } = useWeather();
   return (

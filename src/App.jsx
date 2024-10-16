@@ -7,12 +7,15 @@ import SearchResult from './components/result/SearchResult'
 import { WeatherProvider } from './Context/WeatherContext';
 
 function App() {
+  //New user has no 'hasVisited' key in local storge
  const [newUser, setNewUser] = useState(() => !localStorage.getItem('hasVisited'));
 
+ // User is registered in local storage
  const newUserBoarded = () => {
    localStorage.setItem('hasVisited', 'true');
    setNewUser(false);
  }
+ //When app component mounts, if new user, display splash screen. If existing user, replace with dashboard so user can't go back to previous screens.
 
   return (
     <Router>

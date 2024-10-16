@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useWeather } from '../../Context/WeatherContext'
 import fetchWeather from '../../API/FetchWeather'
 
-const SearchBar = ({onFocus, onBlur}) => {
+const SearchBar = ({onFocus, onBlur, inputRef}) => {
  const [list, setList] = useState([])
  const [city, setCity] = useState('')
  const [error, setError] = useState(null)
@@ -12,22 +12,33 @@ const SearchBar = ({onFocus, onBlur}) => {
  const navigate = useNavigate();
 
  const cityForm = useRef(null);
- const inputRef = useRef(null);
+ const searchCityTimer = useRef(null);
 
+ //1 second after every change in the input, the searchCity API is run
  const handleChange = (e) => {
-    setCity(e.target.value)
-    searchCity(e.target.value, setList, setError);
-    if (e.target.value === '') {
-      list.length = 0;
-      setError(null)
-    } 
+  const city = e.target.value.trim();
+    setCity(city)
 
-    if (list.length > 0) {
-      setError(null)
+    if (searchCityTimer.current) {
+      clearTimeout(searchCityTimer.current);
     }
 
+    searchCityTimer.current = setTimeout(() => {
+      if (city === '') {
+        setList([]);
+        setError(null);
+      } else {
+        searchCity(city, setList, setError);
+      }
+      if(list.length > 0) {
+        setError(null);
+      }
+    },500);
+
+    return () => clearTimeout(searchCityTimer.current);
  }
 
+ //fetches the weather data of any list item
  const handleFetchWeather = (lat, lon) => {
    fetchWeather(lat, lon, setWeatherData, setError);
    if(!error) {

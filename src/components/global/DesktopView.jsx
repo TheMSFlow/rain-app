@@ -1,7 +1,8 @@
 import React from 'react'
-import Header from '../global/Header'
-import StatusBar from './StatusBar'
+import Header from './Header'
+import StatusBar from '../result/StatusBar'
 
+//DesktopView handles the 1fr part of the 2 column grid. It is hidden on mobile and tablet.
 const DesktopView = ({ text, title, image }) => {
   return (
     <>

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Onboarding = ({userBoarded}) => {
     const navigate = useNavigate()
-
+    //finishOnboarding runs a userBoarded function (passed as props to the app component) that creates hasVisited key and sets its value to true in local storage, before navigating to dashboard.
     const finishOnboarding = () => {
       userBoarded();
       navigate('/dashboard');

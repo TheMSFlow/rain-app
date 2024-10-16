@@ -18,6 +18,9 @@ const SearchResult = () => {
     const lastSavedSearch = sessionStorage.getItem('weatherData') 
     const lastSavedLocation = sessionStorage.getItem('currentLocation')
 
+    console.log(`Searched Location on refresh: ${sessionStorage.getItem('weatherData')}`);
+    console.log(`User's Location on refresh: ${sessionStorage.getItem('currentLocation')}`);
+
     const fetchRealTimeWeather = () => {
       if(lastSavedLocation) {
         const location = JSON.parse(lastSavedLocation);

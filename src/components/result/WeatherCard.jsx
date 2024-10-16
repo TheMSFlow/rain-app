@@ -10,7 +10,9 @@ const WeatherCard = ({image}) => {
   return (
     <>
     <section className='relative h-auto w-full px-4 xl:pt-6'>
+      {/* Handles the subtle weather background that reflects rain, sun, clear-sky and dark-clouds */}
         <HandleWeatherBackground />
+        {/* Handles the 2d weather Icons based on weather data */}
         <HandleWeatherIcon />
       <div className='flex flex-col gap-4 justify-center items-center'>
         <div className='lg:hidden xl:block'><WeatherCardMini /></div>

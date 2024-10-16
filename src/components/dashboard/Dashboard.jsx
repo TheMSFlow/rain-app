@@ -4,7 +4,7 @@ import Header from '../global/Header'
 import SearchLocator from './SearchLocator'
 
 const Dashboard = () => {
-
+  // All data saved in session storage is removed when the dashboard component mounts.
   useEffect(() => {
     sessionStorage.removeItem('weatherData');
     sessionStorage.removeItem('currentLocation');
@@ -13,6 +13,7 @@ const Dashboard = () => {
 
   return (
     <>
+    {/*main element displays block on mobile and tablet. On larger screens (xl and above) it displays 2 grid columns, 340px and 1fr.*/}
     <main className='block xl:grid xl:grid-cols-[340px_1fr] grid-rows-1 gap-0 min-h-screen w-screen bg-charcoal'>
         <div className='relative'>
             {<div className='xl:hidden'>

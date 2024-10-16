@@ -1,14 +1,14 @@
 import React from 'react'
-import WeatherButton from './WeatherButton'
+import WeatherButton from '../global/WeatherButton'
 import { useWeather } from '../../Context/WeatherContext'
-import UseWeatherMain from '../../handling/weather/main/UseWeatherMain';
-import UseWeatherDesktop from '../../handling/weather/main/UseWeatherDesktop';
 
+// Asset imports 
 import tenD from '../../assets/weather-icons/flat/10d.svg';
 import temp from '../../assets/weather-icons/flat/temp.svg';
 import wind from '../../assets/weather-icons/flat/wind.svg';
 import humidity from '../../assets/weather-icons/flat/humidity.svg';
 
+// Shows the weather description, feels like (temp), wind speed, humidity. (P1) Each weather button should carry it's own set of recommendations
 const Recommendations = () => {
   const { weatherData} = useWeather();
 
