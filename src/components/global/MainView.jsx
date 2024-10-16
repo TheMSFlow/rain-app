@@ -8,7 +8,7 @@ import Recommendations from '../result/Recommendations'
 const MainView = ({ text, title, image }) => {
   return (
     <>
-     <div className='w-full h-screen overflow-y-auto flex flex-col gap-8 items-center justify-start xl:bg-sidebar rounded-r-3xl'>
+     <div className='w-full max-h-[100svh] overflow-y-auto flex flex-col gap-8 items-center justify-start xl:bg-sidebar rounded-r-3xl'>
         <div className='xl:hidden w-full mt-2 lg:mt-4 px-4'>
           <Header 
             backBtn={true} 

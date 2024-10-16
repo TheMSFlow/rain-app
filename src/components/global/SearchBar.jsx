@@ -64,7 +64,7 @@ const SearchBar = ({onFocus, onBlur, inputRef}) => {
     <div className='flex flex-col gap-0 justify-center items-center w-full'>
         <form ref={cityForm} onSubmit = {handleSubmit} className='bg-white flex flex-row gap-2 items-center justify-start rounded-3xl py-2 pl-4 w-full'>
         <img src='/search.svg' />
-        <input className='placeholder-primary text-primary-dark focus:outline-none text-base w-full mr-1  bg-transparent border-none appearance-none ' type='text' 
+        <input className='placeholder-primary text-primary-dark focus:outline-none text-base w-full mr-1 bg-transparent border-none appearance-none ' type='text' 
         name='search' 
         placeholder='Search for a city or local'
         onChange={handleChange}
