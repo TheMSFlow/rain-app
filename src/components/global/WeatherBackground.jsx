@@ -4,11 +4,11 @@ const WeatherBackground = ({ className,icons, heading, subheading, button }) => 
   return (
     <>
     <div className={`${className} bg-charcoal flex flex-col justify-center items-center z-0 relative`}>
-            <div className='flex flex-row w-full'>
+            <div className='flex flex-row w-full h-2/4'>
             <img className='w-[50%] object-cover' src='/cold.png'/>
             <img className='w-[50%] object-cover' src='/sunny.png'/>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row w-full h-2/4'>
             <img className='w-[50%] object-cover' src='/cloudy-dark.png'/>
             <img className='w-[50%] object-cover' src='/clear-sky.png'/>
             </div>
